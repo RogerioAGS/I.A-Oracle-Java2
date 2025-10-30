@@ -1,11 +1,11 @@
 # I.A-Oracle-Java2
 
-Seção 1 - Exercício 1 - Tipos de Dados Java
-Objetivo:
-Familiarizar-se com a sintaxe de declaração (tipo nome;) e inicialização (nome = valor;) dos principais tipos de dados em Java: int, double, boolean e String.
-Código de Início (Template)
-Complete as seções // TODO: na classe principal.
-Java
+#Seção 1 - Exercício 1 - Tipos de Dados Java
+#Objetivo:
+#Familiarizar-se com a sintaxe de declaração (tipo nome;) e inicialização (nome = valor;) dos principais tipos de dados em Java: int, double, boolean e String.
+#Código de Início (Template)
+#Complete as seções // TODO: na classe principal.
+#Java
 public class Main {
     public static void main(String[] args) {
         
@@ -46,8 +46,8 @@ public class Main {
     }
 }
 
-Resolução
-Java
+#Resolução
+#Java
 public class Main {
     public static void main(String[] args) {
         
@@ -93,12 +93,12 @@ public class Main {
     }
 }
 
-Exercício 2 - Lógica Condicional
-Objetivo:
-Praticar a declaração de variáveis double e o uso das estruturas de controle de fluxo if e else (e, opcionalmente, else if) para tomar decisões no código.
-Código de Início (Template)
-Complete a lógica condicional na seção // TODO:.
-Java
+#Exercício 2 - Lógica Condicional
+#Objetivo:
+#Praticar a declaração de variáveis double e o uso das estruturas de controle de fluxo if e else (e, opcionalmente, else if) para tomar decisões no código.
+#Código de Início (Template)
+#Complete a lógica condicional na seção // TODO:.
+#Java
 public class Main {
     public static void main(String[] args) {
         
@@ -129,9 +129,9 @@ public class Main {
     }
 }
 
-Solução Esperada (Exemplo)
-Esta é a solução que cobre as condições solicitadas e inclui um else if e um else para cobrir todos os cenários.
-Java
+#Resolução:
+#Esta é a solução que cobre as condições solicitadas e inclui um else if e um else para cobrir todos os cenários.
+#Java
 public class Main {
     public static void main(String[] args) {
         
