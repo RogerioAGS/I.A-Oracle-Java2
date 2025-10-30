@@ -229,5 +229,52 @@ public class Main {
     }
 }
 
+#Seção 1 - Desafio 1 - Conversor de Temperatura
+#Objetivo:
+#Integrar a entrada de dados do usuário (Scanner), a conversão de tipos (garantindo que o input seja um double) e o uso de uma fórmula matemática para conversão.
+#Pré-requisito (Importação):
+#É importante lembrar os alunos que a classe Scanner requer uma linha de importação no início do arquivo.
+#Código de Início (Template)
+#Completar a importação, a criação do objeto Scanner, a leitura da temperatura e o cálculo na seção // TODO:.
+#Java
+// TODO: Adicione a importação necessária para a classe Scanner aqui
+import java.util.Scanner; 
+
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("--- Desafio 1: Conversor de Celsius para Fahrenheit ---");
+        
+        // Crie o objeto Scanner para ler a entrada do usuário
+        // TODO: Inicialize o objeto Scanner
+        // Scanner scanner = new Scanner(System.in);
+        
+        
+        // Variável para armazenar a temperatura em Celsius
+        double celsius;
+        
+        // Variável para armazenar a temperatura convertida em Fahrenheit
+        double fahrenheit;
+        
+        // ------------------------------------------------------------------
+        
+        System.out.print("Digite a temperatura em Celsius (°C): ");
+        
+        // TODO: Leia o valor double fornecido pelo usuário e armazene na variável 'celsius'
+        
+        
+        // TODO: Calcule Fahrenheit usando a fórmula: F = C * 1.8 + 32
+        
+        
+        // TODO: Imprima o resultado final no formato: X.X °C equivalem a Y.Y °F
+        
+        
+        // TODO: Feche o objeto Scanner após o uso (boa prática)
+        
+        
+        // ------------------------------------------------------------------
+    }
+}
+
 
 
