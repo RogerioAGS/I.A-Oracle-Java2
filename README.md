@@ -161,3 +161,73 @@ public class Main {
     }
 }
 
+#Seção 1 - Exercício 3 - Repetição Simples (for)
+#Objetivo:
+#Praticar a sintaxe do laço for em Java para simular uma tarefa repetitiva, como a coleta de dados de um sensor.
+#Código de Início (Template)
+#Implemente o laço for na seção // TODO:.
+Java
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("--- Iniciando Exercício 3: Simulação de Leituras de Sensor ---");
+        
+        int totalDeLeituras = 10;
+        
+        System.out.println("Simulando " + totalDeLeituras + " ciclos de leitura...");
+        
+        // ------------------------------------------------------------------
+        
+        // TODO: Crie um laço 'for' que comece em 1 e vá até 'totalDeLeituras' (10).
+        // A variável de controle (geralmente 'i') deve representar o número da leitura.
+        
+        
+        // Exemplo da estrutura (use esta como guia, mas complete o loop):
+        // for (int i = 1; i <= totalDeLeituras; i++) {
+        //     // Seu código de impressão aqui
+        // }
+        
+        // Coloque seu laço 'for' aqui:
+        
+        
+        
+        
+        // ------------------------------------------------------------------
+        
+        System.out.println("--- Fim da Simulação de Leituras ---");
+    }
+}
+
+#Resolução
+#Esta é a solução que usa o laço for para iterar de 1 a 10 e imprimir o contador.
+#Java
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("--- Iniciando Exercício 3: Simulação de Leituras de Sensor ---");
+        
+        int totalDeLeituras = 10;
+        
+        System.out.println("Simulando " + totalDeLeituras + " ciclos de leitura...");
+        
+        // ------------------------------------------------------------------
+        
+        // O laço 'for' deve ter 3 partes: 
+        // 1. Inicialização (int i = 1)
+        // 2. Condição de Parada (i <= totalDeLeituras)
+        // 3. Incremento (i++)
+        
+        for (int i = 1; i <= totalDeLeituras; i++) {
+            // A cada ciclo, imprime o número da leitura atual
+            System.out.println("Leitura " + i + " - Status: OK");
+        }
+        
+        
+        // ------------------------------------------------------------------
+        
+        System.out.println("--- Fim da Simulação de Leituras ---");
+    }
+}
+
+
+
