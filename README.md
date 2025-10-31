@@ -298,5 +298,129 @@ public class Main {
     }
 }
 
+#Desafio 2 - Configuração de Build
+#Objetivo:
+Aprender a adicionar dependências externas (bibliotecas) ao projeto usando o gerenciador de build (Maven ou Gradle) e implementar o logging básico com uma biblioteca padrão (Log4j ou similar como o SLF4J com Logback, que é mais moderno e leve, e é o que usaremos aqui).
 
+1. Instruções Comuns (Java)
+Os alunos devem criar uma classe chamada LoggerExample (ou usar a Main) e adicionar o código de logging após configurarem o build.
+LoggerExample.java (Para ser usada após a configuração do build)
+Java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class LoggerExample {
+
+    // 1. Criação do logger estático para esta classe
+    // Usamos SLF4J como interface, que é o padrão da indústria.
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoggerExample.class);
+
+    public static void main(String[] args) {
+        
+        System.out.println("--- Desafio 2: Teste de Logging (Verifique a saída no console) ---");
+        
+        // 2. Uso dos diferentes níveis de logging
+        LOGGER.info("Iniciando o sistema de ML...");
+        
+        // Simulação de um evento importante no sistema
+        int registrosProcessados = 10000;
+        LOGGER.debug("Processando {} registros do Data Lake.", registrosProcessados);
+
+        // Mensagem de alerta (por exemplo, um modelo não está carregando)
+        LOGGER.warn("Atenção: A configuração de credenciais está incompleta.");
+
+        // Mensagem de erro (se o projeto falhar ao rodar)
+        try {
+            // Simulação de uma falha
+            throw new RuntimeException("Falha ao inicializar o Módulo ID3.");
+        } catch (Exception e) {
+            LOGGER.error("ERRO CRÍTICO: Não foi possível carregar o módulo. Detalhes: {}", e.getMessage());
+        }
+
+        System.out.println("--- Fim do Teste ---");
+    }
+}
+
+
+2. Instruções Específicas para o Gerenciador de Build
+A. Para Usuários de Maven (pom.xml)
+Os alunos devem adicionar as seguintes dependências ao arquivo pom.xml, dentro da tag <dependencies>.
+Maven Configuration (Código):
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.oracle.ia</groupId>
+    <artifactId>ia-java-course</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
+
+
+    <!-- TODO: Adicionar as dependências de SLF4J/Logback aqui dentro da tag <dependencies> -->
+    <dependencies>
+        <!-- SLF4J API (O frontend que usamos no código Java) -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.12</version>
+        </dependency>
+       
+        <!-- Logback Classic (A implementação real do logging) -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
+
+
+</project>
+
+
+Passos:
+Copiar e colar as duas dependências (slf4j-api e logback-classic).
+Salvar o pom.xml.
+Executar o comando de recarga do Maven na IDE (geralmente um ícone de "M" ou "Recarregar").
+Executar a classe LoggerExample.java.
+B. Para Usuários de Gradle (build.gradle)
+Os alunos devem adicionar as seguintes dependências ao arquivo build.gradle, dentro do bloco dependencies.
+Gradle Configuration (Código):
+
+plugins {
+    id 'java'
+}
+
+group = 'com.oracle.ia'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+// TODO: Adicionar as dependências de SLF4J/Logback aqui dentro do bloco dependencies
+dependencies {
+    // SLF4J API (O frontend que usamos no código Java)
+    implementation 'org.slf4j:slf4j-api:2.0.12'
+    
+    // Logback Classic (A implementação real do logging)
+    runtimeOnly 'ch.qos.logback:logback-classic:1.4.14'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+Passos:
+Copiar e colar as duas linhas de dependência no bloco dependencies.
+Salvar o build.gradle.
+Executar o comando de sincronização do Gradle na IDE (geralmente um ícone de "elefante" ou "Sincronizar").
+Executar a classe LoggerExample.java.
 
